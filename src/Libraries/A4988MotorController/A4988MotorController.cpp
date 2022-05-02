@@ -23,5 +23,5 @@ void A4988MotorController::move(int steps, bool clockwise) {
 }
 
 int A4988MotorController::estimatedStepsPerTrack(int millimetersPerRevolution, int trackLengthInMillimeters) {
-  return _stepsPerRevolution * (trackLengthInMillimeters / (_stepsPerRevolution * 1.0));
+  return _stepsPerRevolution * (trackLengthInMillimeters / (millimetersPerRevolution * 1.0));
 }
