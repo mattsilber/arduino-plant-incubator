@@ -10,7 +10,7 @@ jobs:
       - uses: arduino/compile-sketches@v1
         with:
           fqbn: 'arduino:avr:uno'
-          sketch-paths: |
+          sketch-paths:
           	- src/PlantIncubator
           libraries: |
             - name: A4988MotorController
