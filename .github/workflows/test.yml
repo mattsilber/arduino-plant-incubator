@@ -14,4 +14,10 @@ jobs:
           fqbn: 'arduino:avr:uno'
           sketch-paths: |
             - src/PlantIncubator
-          libraries: '- source-path: ./src/Libraries/'
+          libraries: |
+            - name: A4988MotorController
+              source-path: src/Libraries/A4988MotorController
+            - name: EndstopController
+              source-path: src/Libraries/EndstopController
+            - name: LightController
+              source-path: src/Libraries/LightController
