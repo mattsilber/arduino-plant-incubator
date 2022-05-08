@@ -10,7 +10,7 @@
 | motor-holder | 2 | The top/bottom mount for the motor |
 | pulley-idler-holder | 1 | Holds the pulley idler in place |
 | pulley-idler | 1 | The idler for the timing belt |
-| pulley-slider-mount - 2 | The mount connected to the timing belt which slides across the unthreaded rods |
+| pulley-slider-mount | 2 | The mount connected to the timing belt which slides across the unthreaded rods |
 
 #### Notes
 
