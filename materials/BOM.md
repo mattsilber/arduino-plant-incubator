@@ -20,10 +20,10 @@ Pieces are duplicated out of laziness, but can be used for multiple purposes.
 
 ### Rods 
 
-4x threaded rods (desired width)
-4x threaded rods (desired height)
-2x threaded rods (desired length)
-2x unthreaded rods (desired length)
+* 4x threaded rods (desired width)
+* 4x threaded rods (desired height)
+* 2x threaded rods (desired length)
+* 2x unthreaded rods (desired length)
 
 #### Notes
 
@@ -33,14 +33,14 @@ The unthreaded rods need to be manually threaded at the ends to properly attach 
 
 ### Nuts
 
-22x for the threaded rods (16 for the bases, 2 for the idler, 4 for the motor)
-16x for the unthreaded rods (8 for the bases, 8 for the endstops)
-1x for the idler screw
+* 22x for the threaded rods (16 for the bases, 2 for the idler, 4 for the motor)
+* 16x for the unthreaded rods (8 for the bases, 8 for the endstops)
+* 1x for the idler screw
 
 ### Washers
 
-38x everywhere
-24x lock-washers for the bases
+* 38x everywhere
+* 24x lock-washers for the bases
 
 ### Circuit Components
 
@@ -51,10 +51,10 @@ The unthreaded rods need to be manually threaded at the ends to properly attach 
 
 ### Power Sources
 
---- for the arduino
-8v/1A for the motor
---- for the light
---- for the water injection solenoid 
+* --- for the arduino
+* 8v/1A for the motor
+* --- for the light
+* --- for the water injection solenoid 
 
 ### Additional Physical Components 
 
