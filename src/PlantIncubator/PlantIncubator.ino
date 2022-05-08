@@ -13,7 +13,7 @@ struct MotorizedLightSource {
   A4988MotorController motorController;
   EndstopController endstopHome;
   EndstopController endstopEnd;
-  bool clockwiseMovesForward;
+  boolean clockwiseMovesForward;
   int millimetersPerMotorRevolution;
 };
 
@@ -152,4 +152,7 @@ void handleHomeEndstopReached(IncubationGroup group) {
     
   group.state = awaitingStart;
   group.stateChangedAtMs = millis();
+
+  // Move some arbitrary number of steps off the home endstop so it's not pulled high
+  group.motorizedLightSource.motorController.move(20, !group.motorizedLightSource.clockwiseMovesForward);
 }
