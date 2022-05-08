@@ -154,5 +154,5 @@ void handleHomeEndstopReached(IncubationGroup group) {
   group.stateChangedAtMs = millis();
 
   // Move some arbitrary number of steps off the home endstop so it's not pulled high
-  group.motorizedLightSource.motorController.move(20, !group.motorizedLightSource.clockwiseMovesForward);
+  group.motorizedLightSource.motorController.move(20, group.motorizedLightSource.clockwiseMovesForward);
 }
