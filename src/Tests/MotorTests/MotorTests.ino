@@ -1,6 +1,5 @@
 #include <A4988MotorController.h>
 #include <EndstopController.h>
-#include <LightController.h>
 
 A4988MotorController motorController(2, 3, 200);
 EndstopController endstopHome(A0);
@@ -11,7 +10,7 @@ boolean movingClockwise = true;
 void setup() { }
 
 /**
- * Bounce back and forth between the endstops, moving at 10 steps / second
+ * Bounce back and forth between the endstops, moving at 1 step / 10ms
  */
 void loop() {
   if (movingClockwise) {
