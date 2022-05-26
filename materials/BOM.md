@@ -33,21 +33,21 @@ The unthreaded rods need to be manually threaded at the ends to properly attach 
 
 ### Nuts
 
-* 22x for the threaded rods (16 for the bases, 2 for the idler, 4 for the motor)
+* 28x for the threaded rods (16 for the bases, 4 for the idlers, 8 for the motors)
 * 16x for the unthreaded rods (8 for the bases, 8 for the endstops)
-* 1x for the idler screw
+* 2x for the idler screw
 
 ### Washers
 
-* 38x everywhere
-* 24x lock-washers for the bases
+* 46x everywhere
+* 28x lock-washers (24 for the bases, 4 for the endstops)
 
 ### Circuit Components
 
 | Name | Count | Description |
 | ---- | ----- | ----------- |
-| A4988 Motor Controller | 1 | Controls the stepper motor |
-| 17HS4401S Stepper Motor | 1 | Moves the lights |
+| A4988 Motor Controller | 2 | Controls the stepper motor |
+| 17HS4401S Stepper Motor | 2 | Moves the light rig |
 
 ### Power Sources
 
@@ -61,4 +61,4 @@ The unthreaded rods need to be manually threaded at the ends to properly attach 
 | Name | Count | Description |
 | ---- | ----- | ----------- |
 | Timing Belt | 1 | ... |
-| Timing Belt Pulley-gear | 1 | Moves the timing belt |
+| Timing Belt Pulley-gear | 2 | Moves the timing belt |

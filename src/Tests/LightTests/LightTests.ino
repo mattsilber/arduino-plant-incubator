@@ -3,7 +3,7 @@
 LightController lightController(4);
 
 boolean lightOn = false;
-boolean lightChangedAtMs = 0;
+long lightChangedAtMs = 0;
 
 void setup() { }
 
@@ -11,7 +11,7 @@ void setup() { }
  * Toggle the light relay on and off, once per second
  */
 void loop() {
-  if (1000 < lightChangedAtMs - millis()) {
+  if (1000 < millis() - lightChangedAtMs) {
     lightChangedAtMs = millis();
     lightOn = !lightOn;
     
