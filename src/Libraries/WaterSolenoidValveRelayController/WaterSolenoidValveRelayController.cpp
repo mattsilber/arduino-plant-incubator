@@ -5,8 +5,8 @@
 void WaterSolenoidValveRelayController::loop() {
   if (isFrequencyThresholdMet() && isMoistureThresholdMet()) {
     Serial.println(
-      "Attempting to water pin: "
-        + String(_solenoidRelayPin)
+      "Attempting to water group: "
+        + String(_id)
     );
 
     attemptWatering(_wateringConfig.maxWateringDurationMs);
@@ -16,8 +16,8 @@ void WaterSolenoidValveRelayController::loop() {
 void WaterSolenoidValveRelayController::attemptWatering(long durationMs) {
   if (!isMoistureThresholdMet()) {
     Serial.println(
-      "Moisture threshold not met. Ignoring watering request for pin: "
-        + String(_solenoidRelayPin)
+      "Moisture threshold not met. Ignoring watering request for group: "
+        + String(_id)
     );
 
     return;
@@ -25,8 +25,8 @@ void WaterSolenoidValveRelayController::attemptWatering(long durationMs) {
 
   if (!isFrequencyThresholdMet()) {
     Serial.println(
-      "Frequency threshold not met. Ignoring watering request for pin: "
-        + String(_solenoidRelayPin)
+      "Frequency threshold not met. Ignoring watering request for group: "
+        + String(_id)
     );
 
     return;
@@ -35,24 +35,24 @@ void WaterSolenoidValveRelayController::attemptWatering(long durationMs) {
   long waterDurationMs = min(_wateringConfig.maxWateringDurationMs, durationMs);
     
   Serial.println(
-    "Starting watering cycle for pin: " 
-      + String(_solenoidRelayPin) 
+    "Starting watering cycle for group: "
+      + String(_id)
       + " for "
       + String(waterDurationMs)
       + "ms"
   );
 
-  digitalWrite(_solenoidRelayPin, HIGH);
+  digitalWrite(_wateringConfig.solenoidRelayPin, HIGH);
 
   delay(waterDurationMs);
 
-  digitalWrite(_solenoidRelayPin, LOW);
+  digitalWrite(_wateringConfig.solenoidRelayPin, LOW);
 
   _lastWateredAtMs = millis();
 
   Serial.println(
-    "Completed watering cycle for pin: "
-      + String(_solenoidRelayPin)
+    "Completed watering cycle for group: "
+      + String(_id)
   );
 }
 

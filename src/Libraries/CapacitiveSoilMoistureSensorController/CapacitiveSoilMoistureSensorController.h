@@ -14,11 +14,13 @@ public:
     int readPin,
     int transitorBasePin,
     int analogMin,
-    int analogMax
+    int analogMax,
+    bool analogValuesInverted
   ): _readPin(readPin), 
     _transitorBasePin(transitorBasePin), 
     _analogMin(analogMin), 
-    _analogMax(analogMax) {
+    _analogMax(analogMax),
+    _analogValuesInverted(analogValuesInverted) {
     pinMode(readPin, INPUT);
     pinMode(transitorBasePin, OUTPUT);
   };
@@ -31,6 +33,7 @@ private:
   int _transitorBasePin;
   int _analogMin;
   int _analogMax;
+  bool _analogValuesInverted;
 
 };
 

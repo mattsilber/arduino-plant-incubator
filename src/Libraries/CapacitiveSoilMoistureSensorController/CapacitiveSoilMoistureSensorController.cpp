@@ -14,11 +14,13 @@ int CapacitiveSoilMoistureSensorController::getRawAnalogReading() {
 }
 
 double CapacitiveSoilMoistureSensorController::getMoisturePercentage() {
-  return min(
+  double analogPercentage = min(
     1.0,
     max(
       0.0,
       (getRawAnalogReading() - _analogMin) / (1.0 * max(1.0, (_analogMax - _analogMin)))
     )
   );
+
+  return _analogValuesInverted ? 1.0 - analogPercentage : analogPercentage;
 }

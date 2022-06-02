@@ -5,6 +5,7 @@
 #include "CapacitiveSoilMoistureSensorController.h" 
 
 struct WateringConfig {
+  int solenoidRelayPin;
   double minMoistureThreshold;
   long maxWateringDurationMs;
   long minWaterFrequencyMs;
@@ -14,14 +15,14 @@ class WaterSolenoidValveRelayController {
 
 public:
   WaterSolenoidValveRelayController(
-    int solenoidRelayPin,
+    String id,
     CapacitiveSoilMoistureSensorController moistureSensor,
     WateringConfig wateringConfig
-  ): _solenoidRelayPin(solenoidRelayPin),
+  ): _id(id),
     _moistureSensor(moistureSensor),
     _wateringConfig(wateringConfig),
     _lastWateredAtMs(0) {
-      pinMode(solenoidRelayPin, OUTPUT);
+      pinMode(wateringConfig.solenoidRelayPin, OUTPUT);
     };
   
   void loop();
@@ -30,9 +31,11 @@ public:
   bool isFrequencyThresholdMet();
 
 private:
-  int _solenoidRelayPin;
+  String _id;
+
   CapacitiveSoilMoistureSensorController _moistureSensor;
   WateringConfig _wateringConfig;
+
   long _lastWateredAtMs;
 
 };

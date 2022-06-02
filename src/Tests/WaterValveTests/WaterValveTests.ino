@@ -3,9 +3,10 @@
 #include <WaterSolenoidValveRelayController.h>
 
 WaterSolenoidValveRelayController valveController(
-  6,
-  CapacitiveSoilMoistureSensorController(A3, 5, 0, 1500),
+  "Plants A, B, C",
+  CapacitiveSoilMoistureSensorController(A2, 5, 0, 1500, true),
   {
+    solenoidRelayPin: 6,
     minMoistureThreshold: -0.1,
     maxWateringDurationMs: 2500L,
     minWaterFrequencyMs: 10000 // 1000L * 60 * 60

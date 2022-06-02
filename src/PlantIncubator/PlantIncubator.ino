@@ -8,7 +8,7 @@
 IncubationGroup incubationGroups[] = {
   IncubationGroup(
     MotorizedLightController(
-      "Light Over Plants",
+      "Plant Section A",
       {
         lightController: LightController(4),
         motorController: A4988MotorController(2, 3, 200),
@@ -22,10 +22,11 @@ IncubationGroup incubationGroups[] = {
       }
     ),
     WaterSolenoidValveRelayController(
-      6,
-      CapacitiveSoilMoistureSensorController(A3, 5, 0, 1500),
+      "Plants A, B, C",
+      CapacitiveSoilMoistureSensorController(A2, 5, 334, 521, true),
       {
-        minMoistureThreshold: -0.1,
+        solenoidRelayPin: 6,
+        minMoistureThreshold: 0.45,
         maxWateringDurationMs: 2500L,
         minWaterFrequencyMs: 1000L * 60 * 60 * 1
       }

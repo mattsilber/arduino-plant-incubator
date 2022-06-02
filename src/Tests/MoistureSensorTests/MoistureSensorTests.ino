@@ -1,6 +1,6 @@
 #include <CapacitiveSoilMoistureSensorController.h>
 
-CapacitiveSoilMoistureSensorController moistureSensorController(A3, 5, 0, 1500);
+CapacitiveSoilMoistureSensorController moistureSensorController(A2, 5, 0, 1500, true);
 
 void setup() {
   Serial.begin(9600);
