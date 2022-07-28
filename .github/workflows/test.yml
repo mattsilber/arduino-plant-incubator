@@ -5,7 +5,7 @@ on:
 
 jobs:
   unit_tests:
-    runs-on: [ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
@@ -21,3 +21,11 @@ jobs:
               source-path: src/Libraries/EndstopController
             - name: LightController
               source-path: src/Libraries/LightController
+            - name: CapacitiveSoilMoistureSensorController
+              source-path: src/Libraries/CapacitiveSoilMoistureSensorController
+            - name: MotorizedLightController
+              source-path: src/Libraries/MotorizedLightController
+            - name: WaterSolenoidValveRelayController
+              source-path: src/Libraries/WaterSolenoidValveRelayController
+            - name: IncubationGroup
+              source-path: src/Libraries/IncubationGroup

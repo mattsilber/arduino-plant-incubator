@@ -2,6 +2,7 @@
 #include <EndstopController.h>
 #include <LightController.h>
 #include <MotorizedLightController.h>
+#include <CapacitiveSoilMoistureSensorController.h>
 #include <WaterSolenoidValveRelayController.h>
 #include <IncubationGroup.h>
 
